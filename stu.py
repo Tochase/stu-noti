@@ -7,6 +7,7 @@ import os       # OS
 import random   # Random
 import re       # RegEx
 import time     # Time
+import datetime # datetime
 import socket   # Socket
 import ssl      # SSL
 import json     # JSON
@@ -151,6 +152,8 @@ def send_mail(smtp_setting, msg_setting, msg_content, recipient):
     message['From'] = email_format_addr('%s <%s>' % (mail_from_name, mail_from_addr)) 
     message['To'] =  email_format_addr('%s <%s>' % (mail_to_name, mail_to_addr))
 
+    # 发送邮件前 输出运行时间信息
+    print(time.strftime('\n%Y-%m-%d %H:%M:%S %A',time.localtime(time.time())))
     try:
         smtp = SMTP_SSL(smtp_server)
         # smtp.set_debuglevel(1) # 开启调试模式，1 开启，0关闭
@@ -159,8 +162,6 @@ def send_mail(smtp_setting, msg_setting, msg_content, recipient):
         smtp.sendmail(mail_from_addr, mail_to_addr, message.as_string())
         smtp.quit()
 	
-        # 发送邮件前 输出运行时间信息
-        print(time.strftime('%Y-%m-%d %H:%M:%S %A\n',time.localtime(time.time())))
         print("[ok]邮件发送成功", mail_to_name, mail_to_addr)
     except smtplib.SMTPException:
         print("[error]无法发送邮件", mail_to_name, mail_to_addr)
@@ -210,7 +211,17 @@ if __name__ == '__main__':
     if False == cmp(local_data, current_notices):
         for n in current_notices:
             if n not in local_data:
-                new_notices.append(n)
+                now = datetime.datetime.now()
+                there_days_ago = now + datetime.timedelta(days=-3)
+                current_date = datetime.datetime.strptime(n[0],"%Y-%m-%d")
+                flag = (current_date - there_days_ago).days
+                # log
+                print('[log] n not in local_data')
+                print(n)
+                if flag <= 4 and flag >= -1:
+                    print('[log] n 添加到发送信息列表')
+                    print(n)
+                    new_notices.append(n)
         if new_notices:
             for nn in new_notices:
                 msg_content = msg_content + '<p>%s <a href="%s">%s</a></p>' % (nn[0], nn[2], nn[1])
