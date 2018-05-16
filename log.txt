@@ -34,3 +34,18 @@
 2018-05-11 11:10:07 Friday
 
 [ok]邮件发送成功 lss 1278511744@qq.com
+[log] n not in local_data
+['2018-05-16', '我校举办大学生综合素质能力提升培训班', 'http://stu.fjnu.edu.cn/97/f4/c5747a169972/page.htm']
+[log] n 添加到发送信息列表
+['2018-05-16', '我校举办大学生综合素质能力提升培训班', 'http://stu.fjnu.edu.cn/97/f4/c5747a169972/page.htm']
+
+2018-05-16 09:40:02 Wednesday
+[ok]邮件发送成功 sir tochase@qq.com
+
+2018-05-16 09:40:04 Wednesday
+[ok]邮件发送成功 xmy 2453502881@qq.com
+
+2018-05-16 09:40:05 Wednesday
+[ok]邮件发送成功 lss 1278511744@qq.com
+[log] n not in local_data
+['2017-09-20', '关于做好2017级家庭经济困难学生认定工作的通知', 'http://stu.fjnu.edu.cn/31/ee/c5747a143854/page.htm']
