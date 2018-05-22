@@ -49,3 +49,14 @@
 [ok]邮件发送成功 lss 1278511744@qq.com
 [log] n not in local_data
 ['2017-09-20', '关于做好2017级家庭经济困难学生认定工作的通知', 'http://stu.fjnu.edu.cn/31/ee/c5747a143854/page.htm']
+[log] n not in local_data
+['2017-09-11', '关于做好2017级新生入学“绿色通道”及有关资助工作的通知', 'http://stu.fjnu.edu.cn/2e/d9/c5747a143065/page.htm']
+2018-05-20 02:50:25 Sunday
+
+4: HTTPConnectionPool(host='stu.fjnu.edu.cn', port=80): Max retries exceeded with url: /5732/list.htm (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f6721dffeb8>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution',))
+2018-05-20 02:51:50 Sunday
+
+4: HTTPConnectionPool(host='stu.fjnu.edu.cn', port=80): Max retries exceeded with url: /5732/list.htm (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f6721dfff98>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution',))
+2018-05-20 02:52:43 Sunday
+
+4: HTTPConnectionPool(host='stu.fjnu.edu.cn', port=80): Max retries exceeded with url: /5732/list.htm (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f6721dffdd8>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution',))
